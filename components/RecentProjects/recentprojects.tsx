@@ -12,7 +12,7 @@ export default function RecentProjects() {
 					Recent projects
 				</h2>
 				<div className='Container__box'>
-					<div className='w-3/12'>
+					<div className=''>
 						<h2 className='text-2xl font-semibold mb-4'>Bezpieczna Przystan</h2>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo
@@ -33,7 +33,7 @@ export default function RecentProjects() {
 						src={project_image}
 						alt='project image'
 						className='rounded-lg'></Image>
-					<div className='w-3/12'>
+					<div className=''>
 						<h2 className='text-2xl'>Work name here</h2>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo

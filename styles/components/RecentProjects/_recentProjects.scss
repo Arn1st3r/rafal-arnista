@@ -1,12 +1,31 @@
+@mixin mobile {
+	@media screen and (max-width: 425px) {
+		@content;
+	}
+}
+
 .Container {
 	background-color: white;
 	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	&__box {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		gap: 96px;
 		padding-bottom: 90px;
+		width: 80%;
+		@include mobile {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin: 0 60px 0 60px;
+		}
 	}
 	&__button {
 		margin-top: 56px;

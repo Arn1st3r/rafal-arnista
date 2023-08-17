@@ -1,11 +1,30 @@
+@mixin mobile {
+	@media screen and (max-width: 425px) {
+		@content;
+	}
+}
 .FormHeadline {
 	color: #9c9c9c;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+		}
+	}
 }
 .FormSection {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	@include mobile {
+		font-size: 8px;
+	}
 	&__button {
 		margin-top: 30px;
 		background-color: #3f8e00 !important;
@@ -27,5 +46,35 @@
 	}
 	&__field {
 		width: 400px;
+		@include mobile {
+			width: 300px;
+			padding: 10px !important;
+		}
+
+		&--error {
+			color: red;
+			border: 2px solid red;
+		}
+		&--focus {
+			border: 2px solid green;
+		}
+	}
+	&__error-message {
+		color: red;
+		position: relative;
+		padding-top: 5px;
+		top: -20px;
+		@include mobile {
+			font-size: 13px;
+		}
+	}
+
+	&__field::placeholder {
+		@include mobile {
+			font-size: 13px;
+		}
+	}
+	#message {
+		height: 200px;
 	}
 }

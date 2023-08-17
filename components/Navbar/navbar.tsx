@@ -1,16 +1,31 @@
 "use client";
-import React from "react";
 import Link from "next/link";
 import Routes from "../../utils/routes";
 import Image from "next/image";
 import linkedIn from "../../public/Linkedin.svg";
 import Github from "../../public/github.svg";
-
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
+	const [activeClass, setActiveClass] = useState("menu collapsible");
+
+	const handleButtonClick = () => {
+		setActiveClass(
+			activeClass === "menu collapsible"
+				? "menu collapsible--expanded"
+				: "menu collapsible"
+		);
+	};
 	return (
 		<>
-			<nav className=''>
-				<ul className='mx-24 pt-5'>
+			<nav className={activeClass}>
+				<FontAwesomeIcon
+					className='menu__bar'
+					icon={faBars}
+					onClick={handleButtonClick}
+				/>
+				<ul className='menu__items collapsible_content mx-24 pt-5'>
 					<li>
 						<Link href={Routes.home}>Home</Link>
 					</li>
