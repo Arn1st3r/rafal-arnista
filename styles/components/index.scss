@@ -1,8 +1,23 @@
 @import "FormComponent";
 @import "MainSection";
 @import "RecentProjects";
+@mixin ultra {
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
+}
 @mixin mobile {
 	@media screen and (max-width: 425px) {
+		@content;
+	}
+}
+@mixin small-phone {
+	@media screen and (max-width: 380px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
 		@content;
 	}
 }
@@ -37,6 +52,13 @@ body {
 		border: 1px solid white;
 		padding: 6px;
 		cursor: pointer;
+		@include tablet {
+			position: relative;
+			left: 720px;
+		}
+		@include small-phone {
+			left: 270px;
+		}
 	}
 }
 .collapsible_content {
@@ -48,7 +70,7 @@ body {
 	max-height: 300vh;
 	transition: all 1.2s ease-out;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
 	.menu {
 		display: flex;
 		justify-content: center;

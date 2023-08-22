@@ -1,5 +1,15 @@
 @mixin mobile {
-	@media screen and (max-width: 425px) {
+	@media screen and (max-width: 455px) {
+		@content;
+	}
+}
+@mixin ultra {
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
 		@content;
 	}
 }
@@ -25,6 +35,18 @@
 			align-items: center;
 			text-align: center;
 			margin: 0 60px 0 60px;
+		}
+		@include ultra {
+			width: 55%;
+		}
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin: 0 60px 0 60px;
+			width: 70%;
 		}
 	}
 	&__button {

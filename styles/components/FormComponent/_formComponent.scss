@@ -22,6 +22,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 50px;
 	@include mobile {
 		font-size: 8px;
 	}
@@ -46,6 +47,9 @@
 	}
 	&__field {
 		width: 400px;
+		margin-bottom: 25px;
+		color: black;
+		outline: none;
 		@include mobile {
 			width: 300px;
 			padding: 10px !important;
@@ -53,17 +57,19 @@
 
 		&--error {
 			color: red;
-			border: 2px solid red;
+			border: 3px solid red;
 		}
 		&--focus {
-			border: 2px solid green;
+			outline: none;
+			border: 3px solid green;
 		}
 	}
 	&__error-message {
 		color: red;
 		position: relative;
-		padding-top: 5px;
 		top: -20px;
+		bottom: -20px;
+
 		@include mobile {
 			font-size: 13px;
 		}
