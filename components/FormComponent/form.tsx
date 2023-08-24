@@ -7,7 +7,7 @@ export default function FormComponent() {
 	const handleSubmit = async (values: any) => {
 		try {
 			const response = await fetch(
-				"https://formsubmit.io/send/rarnista22@gmail.com",
+				"https://formsubmit.io/send/rarnist22@gmail.com",
 				{
 					method: "POST",
 					headers: {
@@ -16,9 +16,6 @@ export default function FormComponent() {
 					body: JSON.stringify(values),
 				}
 			);
-
-			const data = await response.json();
-			console.log(data);
 		} catch (error) {
 			console.error("Wystąpił błąd:", error);
 		}
@@ -51,9 +48,7 @@ export default function FormComponent() {
 					{({ errors, touched, handleChange, handleBlur, handleSubmit }) => (
 						<Form
 							onSubmit={handleSubmit}
-							className='flex flex-col justify-center'
-							action='https://formsubmit.io/send/rarnista22@gmail.com'
-							method='POST'>
+							className='flex flex-col justify-center'>
 							<Input
 								id='email'
 								type='text'

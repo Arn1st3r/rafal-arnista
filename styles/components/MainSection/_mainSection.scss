@@ -195,7 +195,7 @@
 			align-self: center;
 		}
 		@include large-tablet {
-			text-align: left;
+			text-align: center;
 		}
 	}
 	&__button {
@@ -240,16 +240,20 @@
 	display: flex;
 	flex-direction: column;
 	width: 74%;
-	margin-left: 150px;
+	left: 19.5%;
 	position: relative;
 	@include mobile {
-		margin-left: 60px;
+		left: 15% !important;
 	}
-	@include ultra {
-		margin-left: 420px;
-	}
+
 	@include small-tablet {
-		left: -40px;
+		left: 10%;
+	}
+	@include tablet {
+		left: 15%;
+	}
+	@include large-tablet {
+		left: 15%;
 	}
 }
 .Box {
