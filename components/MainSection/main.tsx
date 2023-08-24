@@ -17,13 +17,13 @@ import strapi_logo from "../../public/strapi.png";
 export default function MainSection() {
 	return (
 		<>
-			<div className='Home mx-auto mt-24'>
-				<div className='Home__item1 mt-12 ml-24'>
+			<div className='Home mt-24'>
+				<div className='Home__item1 mt-12 '>
 					<h1 className='text-5xl mb-2'>Rafał Arnista</h1>
 					<h2 className='text-2xl mb-2'>Frontend Developer</h2>
 					<p className='Home__text'>
-						I am a Computer Science student at the University of
-						Gdańsk and I am a Frontend Developer too. I already have experience in creating web
+						I am a Computer Science student at the University of Gdańsk and I am
+						a Frontend Developer too. I already have experience in creating web
 						applications. I always strive to approach tasks with full commitment
 						and passion, which, combined with my ambition and motivation,
 						translates into effectively achieving set goals.<br></br>
@@ -34,7 +34,7 @@ export default function MainSection() {
 						Get in touch
 					</button>
 				</div>
-				<div className='Home__item2 mr-24'>
+				<div className='Home__item2'>
 					<Image src={RA} alt='Rafal Arnista - zdjecie'></Image>
 				</div>
 			</div>
