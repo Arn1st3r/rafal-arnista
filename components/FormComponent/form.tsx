@@ -7,12 +7,13 @@ export default function FormComponent() {
 	const handleSubmit = async (values: any) => {
 		try {
 			const response = await fetch(
-				"https://formsubmit.io/send/rarnist22@gmail.com",
+				"https://formsubmit.io/send/rarnista22@gmail.com",
 				{
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
 					},
+					mode: "no-cors",
 					body: JSON.stringify(values),
 				}
 			);
