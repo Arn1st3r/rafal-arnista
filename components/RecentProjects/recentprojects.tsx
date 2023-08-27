@@ -45,8 +45,8 @@ export default function RecentProjects() {
 						</h2>
 						<p>
 							The website was created to promote the county League of Legends
-							tournament. It's a basic page that provided information about the
-							tournament, includes teams, results of games, rules and live
+							tournament. It&apos;s a basic page that provided information about
+							the tournament, includes teams, results of games, rules and live
 							stream.
 						</p>
 						<button
